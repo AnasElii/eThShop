@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C/C++: clang++ build and debug active file",
+            "type": "cppdbg",
+            "windows": {
+                "type": "cppvsdbg"
+            },
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "cwd": "${workspaceFolder}",
+            "args": [],
+            "stopAtEntry": false,
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "visualizerFile": "/Users/aninoss/Library/Application Support/Code/User/workspaceStorage/d2b59f2c2cd37db90b67fb5ae0c06317/tonka3000.qtvsctools/qt.natvis.xml"
+        },
+        {
+            "name": "QML Debug",
+            "type": "qml",
+            "request": "attach",
+            "host": "localhost",
+            "port": 12150,
+            "paths": {
+                "qrc:/mainLib/interfaces": "${workspaceFolder}/interfaces"
+            }
+        }
+    ]
+}

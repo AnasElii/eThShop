@@ -1,0 +1,30 @@
+{
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "qjsonobject": "cpp",
+        "qnetworkaccessmanager": "cpp",
+        "qguiapplication": "cpp",
+        "array": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "vector": "cpp",
+        "qnetworkrequest": "cpp",
+        "qurlquery": "cpp",
+        "qjsonarray": "cpp",
+        "qscopedpointer": "cpp",
+        "qqmlcontext": "cpp",
+        "istream": "cpp",
+        "locale": "cpp",
+        "tuple": "cpp"
+    },
+    "cmake.configureArgs": [
+        "-Wno-dev",
+        "-DCMAKE_BUILD_TYPE=Debug",
+    ],
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "qmlhelper.debug.sortMembers": true,
+    "qmlhelper.debug.filterFunctions": false,
+    "workbench.editor.showTabs": "multiple",
+    "cmake.sourceDirectory": "/Users/aninoss/Documents/EcommerceApp",
+}

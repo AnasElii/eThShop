@@ -1,0 +1,72 @@
+import QtQuick 6
+import Qt.labs.platform
+import QtQuick.Controls 6
+import QtQuick.Layouts 6
+import QtWebSockets 1
+
+import mainLib 1.0
+
+Window {
+    id: main
+
+    title: qsTr("Product App")
+    visible: true
+    color: "#ccc"
+    width: 320
+    height: 650
+
+    // Component.onCompleted: {
+
+    //     var categoryList = fCategoryManager.getCategories();
+    //     console.log("Category List: " + categoryList.length);
+    //     for(var i = 0; i < categoryList.length; i++){
+    //         var category = categoryList[i];
+    //         console.log("Category: " + category.name);
+    //         categoryModel.append({
+    //             id: category.id,
+    //             text: category.name,
+    //             value: category
+    //         });
+    //     }
+
+    // }
+
+    ListModel{
+        id: categoryModel
+    }
+
+    FCategoryManager{
+        id: fCategoryManager
+
+        Component.onCompleted: {
+            console.log("Category Component Completed");
+        }
+    }
+
+    ComboBox{
+        id: cbCategory
+
+        model: categoryModel
+
+        textRole: "text"
+        valueRole: "value"
+        
+        // currentIndex: model.id     
+
+        Component.onCompleted: {
+
+        var categoryList = fCategoryManager.getCategories();
+        console.log("Category List: " + categoryList.length);
+        for(var i = 0; i < categoryList.length; i++){
+            var category = categoryList[i];
+            console.log("Category: " + category.name);
+            categoryModel.append({
+                id: category.id,
+                text: category.name,
+                value: category
+            });
+        }
+    }  
+ 
+    }
+}
