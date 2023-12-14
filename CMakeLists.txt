@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(ProductApp VERSION 1.0.0 LANGUAGES CXX)
+project(eThShop VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_AUTOMOC ON)
 set(CXX_STANDARD 17)

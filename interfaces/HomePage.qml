@@ -13,7 +13,7 @@ Page {
         var request = createRequest();
 
         // Set the request URL and method
-        request.open("POST", url + "api/fetchProducts.php", true);
+        request.open("POST", configManager.getApisPath() + "fetchProducts.php", true);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
         // Prepare the request data

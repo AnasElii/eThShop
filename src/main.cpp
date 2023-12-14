@@ -7,6 +7,7 @@
 
 #include "fimageuploader.h"
 #include "configmanager.h"
+#include "oproduct.h"
 
 int main(int argc, char *argv[])
 {
@@ -18,7 +19,7 @@ int main(int argc, char *argv[])
 
     // Enable Debugging
     QQmlDebuggingEnabler enabler;
-
+    
     // Determine the operating system and set the style accordingly
     if (QSysInfo::productType() == "android")
     {
