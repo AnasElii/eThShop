@@ -31,7 +31,7 @@ class OProduct : public QObject
 public:
     explicit OProduct(QObject *parent = nullptr);
 
-    OProduct(QString id, QString title, double price, int promo, QString city, QDateTime date, QString description, QString category, bool state, QString sellerID, QString sellerName, QString sellerPhone, QString sellerProfileImage, bool isOnline, bool isValidate, bool isBestSeller, bool isFollowed, bool isFavorite, bool isLiked, QObject *parent = nullptr);
+    explicit OProduct(QString id, QString title, double price, int promo, QString city, QDateTime date, QString description, QString category, bool state, QString sellerID, QString sellerName, QString sellerPhone, QString sellerProfileImage, bool isOnline, bool isValidate, bool isBestSeller, bool isFollowed, bool isFavorite, bool isLiked, QObject *parent = nullptr);
 
     // product(const product &) = delete;
     // product(product &&) = delete;
@@ -61,6 +61,39 @@ public:
     QString category() const;
     void setCategory(const QString &newCategory);
 
+    bool state() const;
+    void setState(bool newState);
+
+    QString sellerID() const;
+    void setSellerID(const QString &newSellerID);
+
+    QString sellerName() const;
+    void setSellerName(const QString &newSellerName);
+
+    QString sellerPhone() const;
+    void setSellerPhone(const QString &newSellerPhone);
+
+    QString sellerProfileImage() const;
+    void setSellerProfileImage(const QString &newSellerProfileImage);
+
+    bool isOnline() const;
+    void setIsOnline(bool newIsOnline);
+
+    bool isValidate() const;
+    void setIsValidate(bool newIsValidate);
+
+    bool isBestSeller() const;
+    void setIsBestSeller(bool newIsBestSeller);
+
+    bool isFollowed() const;
+    void setIsFollowed(bool newIsFollowed);
+
+    bool isFavorite() const;
+    void setIsFavorite(bool newIsFavorite);
+
+    bool isLiked() const;
+    void setIsLiked(bool newIsLiked);
+
 signals:
     
     void idChanged();
@@ -71,6 +104,18 @@ signals:
     void dateChanged();
     void descriptionChanged();
     void categoryChanged();
+    
+    void stateChanged();
+    void sellerIDChanged();
+    void sellerNameChanged();
+    void sellerPhoneChanged();
+    void sellerProfileImageChanged();
+    void isOnlineChanged();
+    void isValidateChanged();
+    void isBestSellerChanged();
+    void isFollowedChanged();
+    void isFavoriteChanged();
+    void isLikedChanged();
 
 private:
     QString m_id;
@@ -81,6 +126,18 @@ private:
     QDateTime m_date;
     QString m_description;
     QString m_category;
+
+    bool m_state;
+    QString m_sellerID;
+    QString m_sellerName;
+    QString m_sellerPhone;
+    QString m_sellerProfileImage;
+    bool m_isOnline;
+    bool m_isValidate;
+    bool m_isBestSeller;
+    bool m_isFollowed;
+    bool m_isFavorite;
+    bool m_isLiked;
 };
 
 #endif // OPRODUCT_H

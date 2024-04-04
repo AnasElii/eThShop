@@ -1,8 +1,6 @@
 #include "fproductmanager.h"
 
-FTimeManager::FProductManager(QObject *parent): QObject{parent}
-{
-}
+FProductManager::FProductManager(QObject *parent) : QObject(parent) {}
 
 QDateTime FProductManager::getCurrentUtcTime() {
     return QDateTime::currentDateTimeUtc();
